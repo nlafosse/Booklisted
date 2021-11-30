@@ -4,14 +4,15 @@ import axios from "axios";
 const Author = (props) => {
   const [author, setAuthor] = useState([]);
   const [authorCatalog, setAuthorCatalog] = useState([]);
+  console.log(props);
 
   React.useEffect(() => {
-    console.log(props);
     axios
       .get(
         `https://openlibrary.org/authors/${props.match.params.person}/works.json`
       )
       .then((info) => {
+        console.log("info: ", info);
         setAuthorCatalog([info.data]);
       })
       .catch((err) => {
@@ -35,28 +36,23 @@ const Author = (props) => {
   console.log("combined: ", combinedArrays);
 
   return (
-    <div>
-      <div>
-        {author.map((name) => {
-          return <h2>Books by {name.name} </h2>;
-        })}
+    <div className="authorPage">
+      <div>Books</div>
 
-        {combinedArrays.map((detail) => {
-          return <div>{/* <p>{detail.entries.title}</p> */}</div>;
-        })}
-      </div>
-      {/* <div> */}
-      {/* REMOVE OBJECTS THAT DO NOT INCLUDE A TITLE */}
-      {/* {authorCatalog
-          .filter((book) => !!book.entries.title)
-          .map((book) => {
-            return (
-              <div>
-                <p>{book.entries.title}</p>
-              </div>
-            );
-          })}
-      </div> */}
+      <div>Author info</div>
+
+      {/* {author.map((authorname) => {
+        return <h2>Books by {authorname.name} </h2>;
+      })}
+
+      {authorCatalog[0].entries.map((detail) => {
+        console.log(detail);
+        return (
+          <div>
+            <p>{detail.title}</p>
+          </div>
+        );
+      })} */}
     </div>
   );
 };

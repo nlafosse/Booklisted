@@ -25,7 +25,12 @@ const Home = () => {
         />
         <button onClick={handleSearch}>Search</button>
       </div>
-      <div>HOME</div>
+      <div className="gatorGif">
+        <img
+          alt="Gator surrounded by books"
+          src="https://media0.giphy.com/media/9Dk2vkAmYs5dsSRu3B/giphy.gif"
+        />
+      </div>
       <div>
         <Route
           path="/books"

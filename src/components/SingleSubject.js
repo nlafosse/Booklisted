@@ -10,7 +10,8 @@ const SingleSubject = (props) => {
     axios
       .get(`http://openlibrary.org/subjects/${props.match.params.genre}.json`)
       .then((info) => {
-        setGenre([info.data]);
+        console.log(info);
+        setGenre(info.data.works);
       })
       .catch((err) => {
         console.log("something is wrong", err);
@@ -21,15 +22,15 @@ const SingleSubject = (props) => {
 
   return (
     <div>
+      <h3>{props.match.params.genre} books</h3>
       {genre.map((book) => {
         console.log("book: ", book.works);
         return (
           <div>
-            <h3>books by genre</h3>
             <img
               src={`https://covers.openlibrary.org/b/id/${book.cover_id}-M.jpg`}
             />
-            <p>{book.works.title}</p>
+            <p>{book.title}</p>
           </div>
         );
       })}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import nocover from "../images/nocover.jpg";
 
 const Books = (props) => {
   const [books, setBooks] = useState([]);
@@ -25,13 +26,15 @@ const Books = (props) => {
   return (
     <div className="books">
       {books.map((book) => {
-        console.log(book.key);
-
         return (
-          <div className="individualBook">
+          <div className="booksDisplay">
             <Link to={`/books${book.key}`}>
               <img
-                src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
+                src={
+                  book.cover_i
+                    ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
+                    : nocover
+                }
               />
               <h3>{book.title}</h3>
             </Link>

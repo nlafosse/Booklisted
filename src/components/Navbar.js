@@ -1,12 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import watercolorreader from "../images/watercolorreader.jpeg";
 
 const Navbar = () => {
   return (
     <div className="navbar">
-      <Link to="/">Home</Link>
-      <Link to="/subjects">Genres</Link>
-      <Link to="/about">About</Link>
+      <div>
+        <p className="logo">
+          {/* <img src={watercolorreader} /> */}
+          BookListed
+        </p>
+      </div>
+      <div className="navlinks">
+        <Link to="/">Home</Link>
+        <Link to="/subjects">Genres</Link>
+        <Link to="/about">About</Link>
+      </div>
     </div>
   );
 };
