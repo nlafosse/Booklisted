@@ -150,3 +150,10 @@ a {
 .subjectHeading {
   text-align: center;
 }
+
+.about {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+  text-align: center;
+}

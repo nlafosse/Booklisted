@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import watercolorreader from "../images/watercolorreader.jpeg";
 
 const Navbar = () => {
   return (
