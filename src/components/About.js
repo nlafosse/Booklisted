@@ -1,5 +1,5 @@
 import React from "react";
-import watercolorread from "../images/watercolorreader.jpeg";
+import reader from "../images/reader.jpg";
 
 const About = () => {
   return (
@@ -19,7 +19,7 @@ const About = () => {
         </p>
       </div>
       <div>
-        <img src={watercolorread} />
+        <img src={reader} />
       </div>
     </div>
   );

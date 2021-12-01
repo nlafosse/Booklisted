@@ -139,6 +139,7 @@ a {
   flex-wrap: wrap;
   margin: 5px;
   padding: 20px;
+  height: max-content;
 }
 
 .subjectBooks {
