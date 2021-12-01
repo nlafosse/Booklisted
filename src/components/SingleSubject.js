@@ -25,20 +25,22 @@ const SingleSubject = (props) => {
 
   return (
     <div>
-      <h3>{props.match.params.genre} books</h3>
-      {genre.map((book) => {
-        console.log("book: ", book.works);
-        return (
-          <div>
-            <Link to={`/books${book.key}`}>
-              <img
-                src={`https://covers.openlibrary.org/b/id/${book.cover_id}-M.jpg`}
-              />
-              <p>{book.title}</p>
-            </Link>
-          </div>
-        );
-      })}
+      <h3 className="subjectHeading">{props.match.params.genre} books</h3>
+      <div className="subjects">
+        {genre.map((book) => {
+          console.log("book: ", book.works);
+          return (
+            <div className="subjectBooks">
+              <Link to={`/books${book.key}`}>
+                <img
+                  src={`https://covers.openlibrary.org/b/id/${book.cover_id}-M.jpg`}
+                />
+                <p>{book.title}</p>
+              </Link>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

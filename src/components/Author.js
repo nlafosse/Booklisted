@@ -56,7 +56,7 @@ const Author = (props) => {
         <p>Born {author.birth_date}</p>
         <p>Died {author.death_date ? author.death_date : null}</p>
         <p>{author.bio ? author.bio.value : ""}</p>
-        <p>Links: </p>
+        <p>Further Resources: </p>
         <p>
           {author.links ? (
             <div>

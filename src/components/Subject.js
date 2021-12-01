@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Subject = () => {
   return (
-    <div className="subjects">
+    <div className="subjectsList">
       <h2>Browse By Genre</h2>
       <ul>
         <li>

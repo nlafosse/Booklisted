@@ -7,8 +7,7 @@ const Navbar = () => {
     <div className="navbar">
       <div>
         <p className="logo">
-          {/* <img src={watercolorreader} /> */}
-          BookListed
+          <Link to="/">BookListed</Link>
         </p>
       </div>
       <div className="navlinks">
