@@ -14,7 +14,7 @@ const Books = (props) => {
         `http://openlibrary.org/search.json?q=${props.match.params.searchText}`
       )
       .then((info) => {
-        setBooks(info.data.docs.slice(0, 9));
+        setBooks(info.data.docs.slice(0, 18));
       })
       .catch((err) => {
         console.log("Something went wrong", err);
@@ -38,12 +38,9 @@ const Books = (props) => {
               />
               <h3>{book.title}</h3>
             </Link>
-            <span className="publishDate">({book.publish_year[0]})</span>
+            <span>({book.first_publish_year})</span>
             <p>
-              by{" "}
-              <Link to={`/author/${book.author_key[0]}`}>
-                {book.author_name}
-              </Link>
+              <Link to={`/author/${book.author_key}`}>{book.author_name}</Link>
             </p>
           </div>
         );

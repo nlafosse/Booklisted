@@ -11,13 +11,15 @@ const SingleBook = (props) => {
     axios
       .get(`https://openlibrary.org/works/${props.match.params.bookkey}.json`)
       .then((info) => {
-        setSingleBook([info.data]);
+        setSingleBook(info.data);
       })
       .catch((err) => {
         console.log("something is wrong", err);
       });
     axios
-      .get(`https://openlibrary.org/search.json?q=dune`)
+      .get(
+        `https://openlibrary.org/search.json?q=${props.match.params.bookkey}`
+      )
       .then((info) => {
         setMoreInfo(info.data.docs);
       })
@@ -31,18 +33,15 @@ const SingleBook = (props) => {
 
   return (
     <div>
-      {singleBook.map((bookDetail) => {
-        return (
-          <div className="individualBook">
-            <img
-              src={`https://covers.openlibrary.org/b/id/${bookDetail.covers[0]}-M.jpg`}
-            />
-            <h2>{bookDetail.title}</h2>
-            <p>First published: {bookDetail.first_publish_date}</p>
-            <p>{bookDetail.description}</p>
-          </div>
-        );
-      })}
+      <div className="individualBook">
+        <img
+          src={`https://covers.openlibrary.org/b/id/$singleBook.covers[0]-M.jpg`}
+        />
+        <p>{singleBook.title} </p>
+        {/* <h2>{singleBook.data ? singleBook.data.title : null}</h2>
+        <p>{singleBook.data ? singleBook.first_publish_date : null}</p>
+        <p>{singleBook.data ? singleBook.data.description : null}</p> */}
+      </div>
     </div>
   );
 };

@@ -103,6 +103,6 @@ input button {
 
 .authorPage {
   display: flex;
-  justify-content: center;
-  margin: ;
+  justify-content: space-around;
+  margin: 0;
 }
