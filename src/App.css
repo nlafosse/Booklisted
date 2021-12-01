@@ -101,8 +101,33 @@ input button {
   text-decoration: none;
 }
 
-.authorPage {
+.bookContainer {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.individualBook {
+  text-align: center;
+  width: 50%;
+}
+
+.authorContainer {
   display: flex;
   justify-content: space-around;
-  margin: 0;
+  margin: 10px;
+}
+
+.authorBox {
+  width: 200px;
+}
+
+.authorBooks {
+  width: 60%;
+}
+
+.authorBooks ul,
+a {
+  list-style-type: none;
+  text-decoration: none;
 }

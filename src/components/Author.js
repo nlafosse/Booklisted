@@ -33,45 +33,43 @@ const Author = (props) => {
   console.log("author catalog: ", authorCatalog);
 
   return (
-    <div>
-      <div className="authorPage">
-        <div className="booksDisplay">
-          {authorCatalog.map((detail) => {
-            return (
-              <div>
-                <ul>
-                  <li>
-                    <Link to={`/books${detail.key}`}>{detail.title}</Link>
-                  </li>
-                </ul>
-              </div>
-            );
-          })}
-        </div>
+    <div className="authorContainer">
+      <div className="authorBooks">
+        {authorCatalog.map((detail) => {
+          return (
+            <div>
+              <ul>
+                <li>
+                  <Link to={`/books${detail.key}`}>{detail.title}</Link>
+                </li>
+              </ul>
+            </div>
+          );
+        })}
+      </div>
 
-        <div>
-          <h2>{author.name} </h2>
-          <img
-            src={`https://covers.openlibrary.org/a/olid/${props.match.params.person}-M.jpg`}
-          />
-          <p>Born {author.birth_date}</p>
-          <p>Died {author.death_date ? author.death_date : null}</p>
-          <p>{author.bio ? author.bio.value : ""}</p>
-          <p>Links: </p>
-          <p>
-            {author.links ? (
-              <div>
-                {author.links.map((link) => {
-                  return (
-                    <p>
-                      <a href={link.url}>{link.title}</a>
-                    </p>
-                  );
-                })}
-              </div>
-            ) : null}
-          </p>
-        </div>
+      <div className="authorBox">
+        <h2>{author.name} </h2>
+        <img
+          src={`https://covers.openlibrary.org/a/olid/${props.match.params.person}-M.jpg`}
+        />
+        <p>Born {author.birth_date}</p>
+        <p>Died {author.death_date ? author.death_date : null}</p>
+        <p>{author.bio ? author.bio.value : ""}</p>
+        <p>Links: </p>
+        <p>
+          {author.links ? (
+            <div>
+              {author.links.map((link) => {
+                return (
+                  <p>
+                    <a href={link.url}>{link.title}</a>
+                  </p>
+                );
+              })}
+            </div>
+          ) : null}
+        </p>
       </div>
     </div>
   );
