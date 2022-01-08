@@ -8,7 +8,6 @@ const Books = (props) => {
 
   React.useEffect(() => {
     console.log(props);
-    // props.setRedirect(false)
     axios
       .get(
         `http://openlibrary.org/search.json?q=${props.match.params.searchText}`

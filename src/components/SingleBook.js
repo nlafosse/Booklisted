@@ -4,7 +4,7 @@ import nocover from "../images/nocover.jpg";
 
 const SingleBook = (props) => {
   console.log(props);
-  const [singleBook, setSingleBook] = useState([]);
+  const [singleBook, setSingleBook] = useState({});
   const [moreInfo, setMoreInfo] = useState([]);
 
   useEffect(() => {
@@ -44,10 +44,7 @@ const SingleBook = (props) => {
         />
         <h2>{singleBook.title} </h2>
         <p>{singleBook.first_publish_date}</p>
-        <p>{singleBook.description}</p>
-        {/* <h2>{singleBook.data ? singleBook.data.title : null}</h2>
-        <p>{singleBook.data ? singleBook.first_publish_date : null}</p>
-        <p>{singleBook.data ? singleBook.data.description : null}</p> */}
+        <p>{singleBook.description?.value}</p>
       </div>
     </div>
   );

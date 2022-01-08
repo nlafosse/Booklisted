@@ -7,7 +7,7 @@ import About from "./About";
 import Books from "./Books";
 import SingleBook from "./SingleBook";
 import Author from "./Author";
-import { Route, Switch } from "react-router";
+import { Route, Switch, Link } from "react-router";
 
 const Main = () => {
   return (
@@ -45,36 +45,6 @@ const Main = () => {
       </Switch>
     </div>
   );
-
-  // const [searchText, setSearchText] = React.useState('');
-  // const [redirect, setRedirect] = React.useState(false);
-
-  // const handleSearch = () => {
-  //         let searchTextMinusSpaces = searchText.split(' ').join('_');
-  //         setSearchText(searchTextMinusSpaces);
-  //         setRedirect(true);
-  // }
-  // return (
-  //     <div>
-  //         <Navbar />
-  //         <div className="searchBox">
-  //             <input
-  //                 type='text'
-  //                 value={searchText}
-  //                 placeholder={"search books, author, isbn"}
-  //                 onChange={(e) => {
-  //                     setSearchText(e.target.value);
-  //                 }}
-  //                 />
-  //             <button onClick={handleSearch}>Search</button>
-  //         </div>
-  //         <div>
-
-  //             <Route exact path='/books' component={() => <Books searchText={searchText} setRedirect={setRedirect} setSearchText={setSearchText}/>} />
-  //             {redirect && <Redirect to={`/books/${searchText}`} />}
-  //         </div>
-  //     </div>
-  // )
 };
 
 export default Main;

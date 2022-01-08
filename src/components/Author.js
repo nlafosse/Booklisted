@@ -13,7 +13,6 @@ const Author = (props) => {
         `https://openlibrary.org/authors/${props.match.params.person}/works.json`
       )
       .then((info) => {
-        // console.log("info: ", info);
         setAuthorCatalog(info.data.entries);
       })
       .catch((err) => {
