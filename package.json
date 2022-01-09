@@ -1,6 +1,6 @@
 {
   "name": "bookapi",
-  "homepage": "https://nlafosse.github.io/Booklisted/",
+  "homepage": "https://nlafosse.github.io/Booklisted",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
