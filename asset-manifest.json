@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/bookapi/static/css/main.fbbdb3e6.chunk.css",
-    "main.js": "/bookapi/static/js/main.2f73b40d.chunk.js",
-    "main.js.map": "/bookapi/static/js/main.2f73b40d.chunk.js.map",
-    "runtime-main.js": "/bookapi/static/js/runtime-main.f402fa56.js",
-    "runtime-main.js.map": "/bookapi/static/js/runtime-main.f402fa56.js.map",
-    "static/js/2.f272a1f1.chunk.js": "/bookapi/static/js/2.f272a1f1.chunk.js",
-    "static/js/2.f272a1f1.chunk.js.map": "/bookapi/static/js/2.f272a1f1.chunk.js.map",
-    "static/js/3.425c5f65.chunk.js": "/bookapi/static/js/3.425c5f65.chunk.js",
-    "static/js/3.425c5f65.chunk.js.map": "/bookapi/static/js/3.425c5f65.chunk.js.map",
-    "index.html": "/bookapi/index.html",
-    "static/css/main.fbbdb3e6.chunk.css.map": "/bookapi/static/css/main.fbbdb3e6.chunk.css.map",
-    "static/js/2.f272a1f1.chunk.js.LICENSE.txt": "/bookapi/static/js/2.f272a1f1.chunk.js.LICENSE.txt",
-    "static/media/nocover.fea3d7c6.jpg": "/bookapi/static/media/nocover.fea3d7c6.jpg",
-    "static/media/watercolorreader.c13a7d31.jpeg": "/bookapi/static/media/watercolorreader.c13a7d31.jpeg"
+    "main.css": "/Booklisted/static/css/main.ecda86b1.chunk.css",
+    "main.js": "/Booklisted/static/js/main.0932c13c.chunk.js",
+    "main.js.map": "/Booklisted/static/js/main.0932c13c.chunk.js.map",
+    "runtime-main.js": "/Booklisted/static/js/runtime-main.267c945a.js",
+    "runtime-main.js.map": "/Booklisted/static/js/runtime-main.267c945a.js.map",
+    "static/js/2.df2cbeb3.chunk.js": "/Booklisted/static/js/2.df2cbeb3.chunk.js",
+    "static/js/2.df2cbeb3.chunk.js.map": "/Booklisted/static/js/2.df2cbeb3.chunk.js.map",
+    "static/js/3.45ea9f6d.chunk.js": "/Booklisted/static/js/3.45ea9f6d.chunk.js",
+    "static/js/3.45ea9f6d.chunk.js.map": "/Booklisted/static/js/3.45ea9f6d.chunk.js.map",
+    "index.html": "/Booklisted/index.html",
+    "static/css/main.ecda86b1.chunk.css.map": "/Booklisted/static/css/main.ecda86b1.chunk.css.map",
+    "static/js/2.df2cbeb3.chunk.js.LICENSE.txt": "/Booklisted/static/js/2.df2cbeb3.chunk.js.LICENSE.txt",
+    "static/media/nocover.fea3d7c6.jpg": "/Booklisted/static/media/nocover.fea3d7c6.jpg",
+    "static/media/reader.4f6748ce.jpg": "/Booklisted/static/media/reader.4f6748ce.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f402fa56.js",
-    "static/js/2.f272a1f1.chunk.js",
-    "static/css/main.fbbdb3e6.chunk.css",
-    "static/js/main.2f73b40d.chunk.js"
+    "static/js/runtime-main.267c945a.js",
+    "static/js/2.df2cbeb3.chunk.js",
+    "static/css/main.ecda86b1.chunk.css",
+    "static/js/main.0932c13c.chunk.js"
   ]
 }
