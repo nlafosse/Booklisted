@@ -10,7 +10,7 @@ const Books = (props) => {
     console.log(props);
     axios
       .get(
-        `http://openlibrary.org/search.json?q=${props.match.params.searchText}`
+        `https://openlibrary.org/search.json?q=${props.match.params.searchText}`
       )
       .then((info) => {
         setBooks(info.data.docs.slice(0, 18));

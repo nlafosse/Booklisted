@@ -10,7 +10,7 @@ const SingleSubject = (props) => {
     console.log(props);
     axios
       .get(
-        `http://openlibrary.org/subjects/${props.match.params.genre}.json?details=true?`
+        `https://openlibrary.org/subjects/${props.match.params.genre}.json?details=true?`
       )
       .then((info) => {
         console.log(info);
