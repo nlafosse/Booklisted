@@ -7,7 +7,7 @@ import About from "./About";
 import Books from "./Books";
 import SingleBook from "./SingleBook";
 import Author from "./Author";
-import { Route, Switch, Link } from "react-router";
+import { Route, Switch } from "react-router";
 
 const Main = () => {
   return (

@@ -6,9 +6,9 @@ const SingleBook = (props) => {
   console.log(props);
   const [singleBook, setSingleBook] = useState({});
   const [moreInfo, setMoreInfo] = useState([]);
+  const [bookCover, setBookCover] = useState([]);
 
   useEffect(() => {
-    console.log(props);
     axios
       .get(`https://openlibrary.org/works/${props.match.params.bookkey}.json`)
       .then((info) => {
@@ -28,17 +28,18 @@ const SingleBook = (props) => {
         console.log("something is wrong", err);
       });
   }, []);
-
   console.log("singleBook variable: ", singleBook);
   console.log("second variable: ", moreInfo);
+  console.log("covers:", singleBook.covers);
+  // setBookCover(singleBook.covers);
 
   return (
     <div className="bookContainer">
       <div className="individualBook">
         <img
           src={
-            singleBook.cover
-              ? `https://covers.openlibrary.org/b/id/$singleBook.covers[0]-M.jpg`
+            singleBook.covers
+              ? `https://covers.openlibrary.org/b/id/${singleBook.covers[0]}-M.jpg`
               : nocover
           }
         />

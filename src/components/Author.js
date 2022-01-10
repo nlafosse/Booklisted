@@ -50,6 +50,7 @@ const Author = (props) => {
       <div className="authorBox">
         <h2>{author.name} </h2>
         <img
+          alt="book cover"
           src={`https://covers.openlibrary.org/a/olid/${props.match.params.person}-M.jpg`}
         />
         <p>Born {author.birth_date}</p>

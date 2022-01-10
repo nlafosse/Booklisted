@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import nocover from "../images/nocover.jpg";
@@ -6,7 +6,7 @@ import nocover from "../images/nocover.jpg";
 const Books = (props) => {
   const [books, setBooks] = useState([]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     console.log(props);
     axios
       .get(
