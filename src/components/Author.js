@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 const Author = (props) => {
   const [author, setAuthor] = useState([]);
   const [authorCatalog, setAuthorCatalog] = useState([]);
-  console.log(props);
 
   React.useEffect(() => {
     axios
@@ -26,7 +25,7 @@ const Author = (props) => {
       .catch((err) => {
         console.log("Something went wrong", err);
       });
-  }, []);
+  }, [props.match.params.person]);
 
   console.log("PROBLEM author variable: ", author);
   console.log("author catalog: ", authorCatalog);

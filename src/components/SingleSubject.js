@@ -19,7 +19,7 @@ const SingleSubject = (props) => {
       .catch((err) => {
         console.log("something is wrong", err);
       });
-  }, []);
+  }, [props]);
 
   console.log("genre variable: ", genre);
 
@@ -33,6 +33,7 @@ const SingleSubject = (props) => {
             <div className="subjectBooks">
               <Link to={`/books${book.key}`}>
                 <img
+                  alt="book cover"
                   src={`https://covers.openlibrary.org/b/id/${book.cover_id}-M.jpg`}
                 />
                 <p>{book.title}</p>

@@ -18,7 +18,7 @@ const Books = (props) => {
       .catch((err) => {
         console.log("Something went wrong", err);
       });
-  }, []);
+  }, [props]);
 
   console.log("books variable:", books);
 
@@ -29,6 +29,7 @@ const Books = (props) => {
           <div className="booksDisplay">
             <Link to={`/books${book.key}`}>
               <img
+                alt="book cover"
                 src={
                   book.cover_i
                     ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
